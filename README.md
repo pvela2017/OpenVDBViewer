@@ -30,6 +30,11 @@ listed below:
 	-OpenEXR/ ILMBase (http://www.openexr.com/downloads.html)
 	-Boost (http://sourceforge.net/projects/boost/files/boost/1.55.0/)
 
+Like this:
+
+	-sudo apt-get install openexr
+	-sudo apt install qtbase5-dev qt5-qmake
+
 Once installed, the locations of these can be specified in the .pro file (explained
 below).
 
