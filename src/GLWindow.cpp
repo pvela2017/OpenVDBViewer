@@ -129,7 +129,7 @@ void GLWindow::loadFile(std::string _file)
         #ifdef DEBUG
             std::cout<<"Current available GPU memory: "<<currentAvailableGPUMemKB()/1024<<"MB"<<std::endl;
         #endif
-        emit(updateUsedGPUMem());
+        Q_EMIT(updateUsedGPUMem());
     #else
         #ifdef DEBUG
             printAMDNotSupported();
@@ -704,7 +704,7 @@ void GLWindow::paintGL()
   }
 
   // update the UI output of the current used GPU memory
-  emit(updateUsedGPUMem());
+  Q_EMIT(updateUsedGPUMem());
 }
 
 void GLWindow::setCrop(float _minx, float _maxx, float _miny, float _maxy, float _minz, float _maxz, int _index)

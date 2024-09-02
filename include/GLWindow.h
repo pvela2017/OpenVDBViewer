@@ -298,7 +298,7 @@ public:
     /// @param [in] _index int - index to return from
     std::string metaValueAt(int _index);
 
-public slots:
+public Q_SLOTS:
     /// @brief Toggle showing the mesh - returns int
     int toggleMesh();
     /// @brief Toggle showing the bounding box
@@ -361,7 +361,7 @@ public slots:
     /// @brief Reset both Camera and VDB Volumne transform
     void resetCameraAndVolumeTransform();
 
-signals:
+Q_SIGNALS:
     /// @brief Signal to update the current used GPU mem on the UI
     void updateUsedGPUMem();
 

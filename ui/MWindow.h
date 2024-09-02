@@ -42,7 +42,7 @@ public:
     explicit MWindow(QWidget *parent = 0);
     ~MWindow();
 
-private slots:
+private Q_SLOTS:
 
 private:
     Ui::MWindow *ui;

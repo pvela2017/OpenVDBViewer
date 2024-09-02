@@ -1288,7 +1288,7 @@ void VDB::processTypedGrid(openvdb::GridBase::Ptr grid)
     else if (grid->isType<openvdb::Vec3SGrid>())  callGetValuesGridVector<openvdb::Vec3SGrid>(openvdb::gridPtrCast<openvdb::Vec3SGrid>(grid));
     else if (grid->isType<openvdb::Vec3DGrid>())  callGetValuesGridVector<openvdb::Vec3DGrid>(openvdb::gridPtrCast<openvdb::Vec3DGrid>(grid));
     // std::string currently not supported so just report error
-    else if (grid->isType<openvdb::StringGrid>()) reportStringGridTypeError();
+    //else if (grid->isType<openvdb::StringGrid>()) reportStringGridTypeError();
 }
 
 // process the type of grid being passed to it using templates and then call the correct function for scalar or vector to get tree values
@@ -1305,5 +1305,5 @@ void VDB::processTypedTree(openvdb::GridBase::Ptr grid)
     else if (grid->isType<openvdb::Vec3SGrid>())  getTreeValues<openvdb::Vec3SGrid>(openvdb::gridPtrCast<openvdb::Vec3SGrid>(grid));
     else if (grid->isType<openvdb::Vec3DGrid>())  getTreeValues<openvdb::Vec3DGrid>(openvdb::gridPtrCast<openvdb::Vec3DGrid>(grid));
     // std::string currently not supported so just report error
-    else if (grid->isType<openvdb::StringGrid>()) reportStringGridTypeError();
+    //else if (grid->isType<openvdb::StringGrid>()) reportStringGridTypeError();
 }

@@ -2,7 +2,7 @@
 # AUTOFIND will attempt to automatically locate the correct headers and libraries needed
 # by looking at the default most common folder for the required headers and libraries.
 # Set to 1 if you wish to use this or set to 0 to use the paths declared below
-AUTOFIND = 0
+AUTOFIND = 1
 ######################################################################################################
 # DEBUG, if set to 1, will print out some more information about the workings of the application
 # and file as it runs. If set to 0, the application will be much quieter when running
@@ -14,7 +14,7 @@ DEBUG = 0
 # Currently the only supported external device is NVidia (automatically defined by this). This will
 # need to be changed in the future to be able to detect the hardware itself. Even though query support
 # is only available for NVidia devices, this application will work fine on all other device hardware
-USE_EXT_GPU = 1
+USE_EXT_GPU = 0
 ######################################################################################################
 
 ######################################################################################################
@@ -55,6 +55,7 @@ MOC_DIR=moc
 OBJECTS_DIR = obj
 
 CONFIG+=x86_64
+CONFIG+=no_keywords
 UI_HEADERS_DIR=ui
 UI_DIR=ui
 QT+= gui opengl core

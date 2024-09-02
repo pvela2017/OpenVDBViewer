@@ -20,6 +20,11 @@
 #define __MAINWINDOW_H__
 
 #include <QMainWindow>
+
+#ifdef Q_FOREACH
+#undef Q_FOREACH
+#endif
+
 #include <QDoubleSpinBox>
 #include "InformationWindow.h"
 #include "AboutWindow.h"
@@ -158,7 +163,7 @@ public:
     /// @brief Retrieve and display information about the file
     void getFileInformation();
 
-public slots:
+public Q_SLOTS:
     /// @brief Method to set the vector length
     void setVectorLength();
     /// @brief Method to set the Level of Detail
@@ -226,7 +231,7 @@ public slots:
     /// @param [in] _updateGL bool - whether to update GL when setting values or not
     void setRampMax(bool _updateGL=true);
 
-private slots:
+private Q_SLOTS:
     /// @brief Reset the crop slider to 0 if released
     void resetCropSlider();
     /// @brief Set channel vectors enabled
