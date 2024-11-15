@@ -30,10 +30,22 @@ listed below:
 	-OpenEXR/ ILMBase (http://www.openexr.com/downloads.html)
 	-Boost (http://sourceforge.net/projects/boost/files/boost/1.55.0/)
 
-Like this:
+For Ubuntu Jammy:
 
 	-sudo apt-get install openexr
 	-sudo apt install qtbase5-dev qt5-qmake
+
+
+ For Ubuntu Noble (openexr removed some libraries):
+ 
+	-git clone -b v2.5.7 https://github.com/AcademySoftwareFoundation/openexr.git
+	-cd openexr
+ 	-mkdir build && cd build && cmake .. && make
+        -Add the #include <cstdint> in the required files 
+	-sudo make install
+
+**Adjust the .PRO file configuration as needed (I changed the path for the libs and
+header in vdb_mapping. Also setted AUTOFIND to 0 and added IMATH_LIB**
 
 Once installed, the locations of these can be specified in the .pro file (explained
 below).
